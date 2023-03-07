@@ -22,6 +22,14 @@ public final class Team {
      */
     private final int standing;
 
+    // AF:
+    // Team t represents a team containing a name, conference, and a numerical standing
+    //
+    // RI:
+    // name is not empty
+    // conference is not empty
+    // standing is not negative
+
     /**
      * Constructs a new Team
      * @param name team name
@@ -46,7 +54,7 @@ public final class Team {
             throw new IllegalArgumentException("Conference name is empty");
         }
         if(standing < 0){
-            throw new IllegalArgumentException("Team standing is out of bounds");
+            throw new IllegalArgumentException("Team standing cannot be negative");
         }
     }
 }
