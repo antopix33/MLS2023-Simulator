@@ -57,4 +57,12 @@ public final class Team {
             throw new IllegalArgumentException("Team standing cannot be negative");
         }
     }
+
+    /**
+     *
+     * @return conference of this
+     */
+    public String getConference(){
+        return this.conference;
+    }
 }
