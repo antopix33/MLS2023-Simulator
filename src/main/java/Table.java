@@ -12,7 +12,7 @@ public final class Table {
      }
 
      private void addTeam(Team t){
-         if (!t.getConference().equals("West") && !t.getConference().equals("East")){
+         if (!(t.getConference().equals("West") || t.getConference().equals("East"))){
              throw new IllegalArgumentException("Invalid conference, choose either East or West");
          } else if (t.getConference().equals("East")){
              eastConf.add(t);
@@ -20,5 +20,9 @@ public final class Table {
              westConf.add(t);
          }
      }
+
+
+
+
 
 }
